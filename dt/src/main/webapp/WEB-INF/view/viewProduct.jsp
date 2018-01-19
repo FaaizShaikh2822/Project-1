@@ -35,12 +35,12 @@
 
                     <p ng-controller="cartCtrl">
                         <a href="<c:url value = "/admin/productInventory" />" class="btn btn-default">Back</a>
-                        <c:if test="${role != 'admin'}">
+                      <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
                         	<a href="#" class="btn btn-warning btn-large" ng-click="addToCart('${product.productId}')"><span class="glyphicon glyphicon-shopping-cart"></span> Order Now</a>
-                        </c:if>
-                        <c:if test="${role != 'admin'}">
+                      </c:if>  
+                       <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
                         	<a href="<spring:url value="/customer/cart" />" class="btn btn-default"><span class="glyphicon glyphicon-hand-right"></span> View Cart</a>
-						</c:if>                    	
+					   </c:if>                    	
                     </p>
 
                 </div>
