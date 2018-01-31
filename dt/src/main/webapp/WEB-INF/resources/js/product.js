@@ -48,4 +48,11 @@ app.controller("cartCtrl", function($scope, $http) {
 
 		return grandTotal;
 	}
+	
+	 $scope.clearCart = function(){
+	        $http.remove('http://localhost:8080/dt/rest/cart/' + $scope.cartId).success(
+	        		function(data){
+	        			$scope.refreshCart()
+	        		});
+	       };
 });

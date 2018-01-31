@@ -1,6 +1,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <spring:url var="image" value="/resources/image"/>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Angular.JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
@@ -38,36 +39,35 @@
 				<a class="navbar-brand" href="/dt/">Dkart</a>
 			</div>
                 </div>
-                <form class="navbar-form navbar-left" action="/productList">
-						 <div class="input-group">
-                <div class="input-group-btn search-panel">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        <span id="search_concept">All</span> <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="${cp}/product/productList/all">Laptops</a></li>
-                      <li><a href="${cp}/product/productList/Smart Phones">Smart Phones</a></li>
-                      <li><a href="${cp}/product/productList/">Dope Gadgets</a></li>
-                      <li><a href="${cp}/product/productList/">Cable & Accessories </a></li>
-                      <li class="divider"></li>
-                      <li><a href="product/productList/all">All Products</a></li>
-                    </ul>
-                </div>
-                <form action="${cp}/product/productList/all" method="post"> 
-                    <input type="hidden" name="search_param" value="all" id="search_param">         
-                <input type="text" class="form-control" name="x" style="width:448px" placeholder=" ">
-                <span class="input-group-btn">
-                    <input style="height: 34px; background-color: #666;"
-									class="btn btn-default" type="submit" value="Go"/>
+                <form class="navbar-form navbar-left" action="/productList/all">
+					<div class="input-group">
+                		<div class="input-group-btn search-panel">
+                    		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        		<span id="search_concept">All</span> <span class="caret"></span>
+                    		</button>
+                    		<ul class="dropdown-menu" role="menu">
+                     		 	<li><a href="${cp}/product/productList/all">Laptops</a></li>
+                     	 		<li><a href="${cp}/product/productList/all">Smart Phones</a></li>
+                      			<li><a href="${cp}/product/productList/all">Dope Gadgets</a></li>
+                    		  	<li><a href="${cp}/product/productList/all">Cable & Accessories</a></li>
+                      			<li class="divider"></li>
+                     	 		<li><a href="product/productList/all">All Products</a></li>
+                    		</ul>
+                		</div>
+                		<form action="/product/productList/all" method="post"> 
+                    		<input type="hidden" name="search_param" value="all" id="search_param">         
+                			<input type="text" class="form-control" name="x" style="width:448px" placeholder=" Search here">
+                			<span class="input-group-btn">
+                   				<input style="height: 34px; background-color: #666;"class="btn btn-default" type="submit" value="Go"/>
 									<i class="glyphicon glyphicon-search"></i>
-								
-								</form>
-                </span>
-            </div>
+							</span>				
+						</form>  			             
+           			</div>
+           	 	</form>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                       
-                        <li><a href="<c:url value="/product/productList/all" />">All Products</a></li>
+                      
+					<li><a href="<c:url value="/product/productList/all"/>">All Products</a></li>
                         <li><a href="<c:url value="/about" />">About Us</a></li>
                           <li><a href="<c:url value="/contact" />">ContactUs</a></li>
                             <li><a href="<c:url value="/help" />">Help</a></li>

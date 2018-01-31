@@ -22,16 +22,14 @@
                     </div>
                 </div>
                 <div class="item">
-                <div class="carousel-caption">
-                            
-                        </div>
+                <div class="carousel-caption"> </div>
                     <img class="second-slide home-image" src="<c:url value="/resources/image/gwbunk.jpg" />" alt="Second slide">
                     <div class="container">
                         
                     </div>
                 </div>
                 <div class="item">
-                    <img class="third-slide home-image " src="<c:url value="/resources/image/SmartphonesDeals.jpg" />" alt="Third slide">
+                    <img class="third-slide home-image " src="<c:url value="/resources/image/GWHERO_1500X300_GPS_2._CB510381470_.jpg" />" alt="Third slide">
                     <div class="container">
                         <div class="carousel-caption">
                                                 </div>

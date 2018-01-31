@@ -7,10 +7,14 @@ cartApp.controller("cartCtrl", function($scope, $http){
            $scope.cart = data;
        });
     };
-
+    
+    //clear cart karne ke liye customer/cart/customerId pass hogi
     $scope.clearCart = function(){
-        $http.remove('http://localhost:8080/dt/rest/cart/' + $scope.cartId).success($scope.refreshCart());
-    };
+        $http.remove('http://localhost:8080/dt/rest/cart/' + $scope.cartId).success(
+        		function(data){
+        			$scope.refreshCart()
+        		});
+       };
 
     $scope.initCartId = function(cartId){
         $scope.cartId = cartId;

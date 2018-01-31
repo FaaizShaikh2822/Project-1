@@ -9,8 +9,8 @@
 
             <p class="lead">Welcome in Customer handle page</p>
         </div>
-
-        <table class="mytable" style="width:100%;">
+		
+        <table class="table table-striped">
             <thead>
             <tr class="bg-success">
                 <th>Name</th>
@@ -30,6 +30,7 @@
                 </tr>
             </c:forEach>
         </table>
+       
 </div>
 </div>
 <%@ include file="/WEB-INF/view/template/footer.jsp" %>
